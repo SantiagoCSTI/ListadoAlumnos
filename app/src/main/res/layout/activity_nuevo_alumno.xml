@@ -2,80 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:id="@+id/activityNuevoAlumno"
+    tools:context=".Activitys.NuevoAlumno">
+
 
     <TableRow
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Listado de Alumnos" />
+            android:text="Registro de Alumno" />
     </TableRow>
-
     <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtBuscarPorNombres"
+                android:id="@+id/edtNombresNUEVOALUMNO"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nombres" />
         </com.google.android.material.textfield.TextInputLayout>
     </TableRow>
-
     <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0 Registros encontrados" />
-    </TableRow>
-
-    <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnBuscar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="btnBuscar_Onclick"
-            app:srcCompat="@mipmap/ic_consultar" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnNuevoAlumo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="btnNuevoAlumno_Onclick"
-            app:srcCompat="@drawable/ic_nuevoregistro" />
-    </TableRow>
-
-    <TableRow
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvListaAlumnos"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDniNUEVOALUMNO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI" />
+        </com.google.android.material.textfield.TextInputLayout>
     </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGrabarRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@mipmap/ic_grabar" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnCancelarRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_cancelar" />
+    </TableRow>
 
 </LinearLayout>
